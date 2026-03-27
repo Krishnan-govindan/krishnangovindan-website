@@ -80,8 +80,13 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:block">
+          {/* Desktop CTA + Avatar */}
+          <div className="hidden lg:flex items-center gap-4">
+            <img
+              src="https://assets.cdn.filesafe.space/m9jCzEyKqM4xlMWTjcgS/media/685aa9b8f1a848bc1fe8873d.jpeg"
+              alt="Krishnan Govindan"
+              className="w-10 h-10 rounded-full object-cover border-2 border-accent/60 shadow-md flex-shrink-0"
+            />
             <Button
               text="Book Free Call"
               href={CALENDLY_URL}
