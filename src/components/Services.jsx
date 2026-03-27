@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { HeartHandshake, Brain, Telescope } from "lucide-react";
-import Card from "./ui/Card";
 import SectionLabel from "./ui/SectionLabel";
 import SectionHeading from "./ui/SectionHeading";
 import services from "../data/services";
@@ -20,7 +19,7 @@ const Services = () => {
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-12">
+        <div className="flex flex-col items-center text-center mb-14">
           <SectionLabel text="YOUR #1 COACH TO HEAL AFTER HEARTBREAK" />
           <SectionHeading>Community, Courses, and Coaching All in One</SectionHeading>
         </div>
@@ -38,24 +37,60 @@ const Services = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.15 }}
-                className="flex"
+                className="group"
               >
-                <Card className="h-full flex flex-col items-center text-center w-full">
-                  {/* Icon */}
-                  <div className="w-16 h-16 rounded-full bg-amber-50 flex items-center justify-center">
-                    {Icon && <Icon size={36} color="#C19A3E" strokeWidth={1.5} />}
+                {/* Card with full background image */}
+                <div
+                  className="relative rounded-2xl overflow-hidden h-full min-h-[420px] flex flex-col justify-end transition-all duration-300 hover:-translate-y-2"
+                  style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.18)" }}
+                >
+                  {/* Background image */}
+                  <img
+                    src={service.image}
+                    alt={service.imageAlt}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+
+                  {/* Gradient overlay — dark at bottom for readability, subtle at top */}
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        "linear-gradient(to bottom, rgba(26,26,46,0.2) 0%, rgba(26,26,46,0.55) 45%, rgba(22,33,62,0.95) 100%)",
+                    }}
+                  />
+
+                  {/* Content over overlay */}
+                  <div className="relative z-10 p-7 flex flex-col">
+                    {/* Icon badge */}
+                    <div
+                      className="w-14 h-14 rounded-full flex items-center justify-center mb-5"
+                      style={{
+                        backgroundColor: "rgba(193,154,62,0.18)",
+                        border: "1.5px solid rgba(193,154,62,0.6)",
+                        backdropFilter: "blur(4px)",
+                      }}
+                    >
+                      {Icon && (
+                        <Icon size={28} color="#E8B84B" strokeWidth={1.8} aria-hidden="true" />
+                      )}
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="font-heading text-xl font-bold text-white leading-snug mb-3">
+                      {service.title}
+                    </h3>
+
+                    {/* Body */}
+                    <p
+                      className="font-body text-sm leading-relaxed"
+                      style={{ color: "rgba(255,255,255,0.82)" }}
+                    >
+                      {service.body}
+                    </p>
                   </div>
-
-                  {/* Title */}
-                  <h3 className="font-heading text-xl font-bold text-charcoal mt-6">
-                    {service.title}
-                  </h3>
-
-                  {/* Body */}
-                  <p className="font-body text-sm text-charcoal/70 leading-relaxed mt-3">
-                    {service.body}
-                  </p>
-                </Card>
+                </div>
               </motion.div>
             );
           })}

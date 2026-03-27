@@ -40,27 +40,20 @@ const AboutKrishnan = () => {
                 style={{ border: "1.5px solid rgba(193,154,62,0.35)" }}
               />
 
-              {/* Photo placeholder */}
-              <div
-                role="img"
-                aria-label="Photo placeholder for Krishnan Govindan"
-                className="relative rounded-2xl overflow-hidden flex items-center justify-center"
+              {/* Coach photo */}
+              <img
+                src="https://assets.cdn.filesafe.space/m9jCzEyKqM4xlMWTjcgS/media/685aa9b8f1a848bc1fe8873d.jpeg"
+                alt="Krishnan Govindan — India's First Divorce Coach"
+                className="relative rounded-2xl object-cover"
                 style={{
                   width: "320px",
-                  aspectRatio: "3 / 4",
-                  background: "linear-gradient(160deg, #16213E 0%, #1A1A2E 100%)",
-                  border: "1px solid rgba(193,154,62,0.2)",
+                  height: "427px",
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  border: "1.5px solid rgba(193,154,62,0.45)",
                   boxShadow: "0 8px 40px rgba(0,0,0,0.18)",
                 }}
-              >
-                <span
-                  aria-hidden="true"
-                  className="font-heading font-bold select-none"
-                  style={{ fontSize: "96px", color: "#C19A3E", opacity: 0.6 }}
-                >
-                  KG
-                </span>
-              </div>
+              />
             </div>
           </motion.div>
 
