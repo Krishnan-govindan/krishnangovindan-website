@@ -20,7 +20,7 @@ const services = [
     title: "Future Vision",
     body: "Build a life that excites and fulfills you. Attract the right partner with your newfound clarity and purpose.",
     iconName: "Telescope",
-    image: "https://images.unsplash.com/photo-1586297135537-94bc81ba6e5b?w=600&h=500&fit=crop&crop=faces,top&q=80",
+    image: "https://assets.cdn.filesafe.space/m9jCzEyKqM4xlMWTjcgS/media/69c6974c2e89d8822c4d8acf.png",
     imageAlt: "Indian couple with hopeful smiles, looking forward to a bright future together",
   },
 ];
