@@ -4,7 +4,7 @@ const services = [
     title: "Self-Worth Recovery",
     body: "Stop letting past rejection define your identity and future. Rebuild unshakeable confidence from within.",
     iconName: "HeartHandshake",
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=500&fit=crop&crop=faces,top&q=80",
+    image: "https://assets.cdn.filesafe.space/m9jCzEyKqM4xlMWTjcgS/media/69c6970f2e89d8632b4d7f56.png",
     imageAlt: "Confident Indian woman reclaiming her self-worth and identity",
   },
   {
