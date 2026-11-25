@@ -5,7 +5,6 @@ import PainPoints from "./components/PainPoints";
 import AboutKrishnan from "./components/AboutKrishnan";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
-import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
@@ -31,7 +30,6 @@ function App() {
         <AboutKrishnan />
         <Services />
         <Testimonials />
-        <Pricing />
         <FAQ />
         <FinalCTA />
       </main>
